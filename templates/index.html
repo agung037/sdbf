@@ -5,36 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        table {
-            margin-top: 20px;
-        }
-
-        table,
-        tr,
-        td {
-            border: 1px solid;
-        }
-    </style>
+    <title>Input Mahasiswa Menggunakan Flask</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Input Mahasiswa Flask</h1>
+    <h1></h1>
 
     <div class="container">
+        <h1 class="text-center m-4"> Input Mahasiswa dengan Flask</h1>
         <div class="form">
             <form action="/" method="post">
-                <input name="nim" type="text" class="text" placeholder="nim">
-                <input name="nama" type="text" class="text" placeholder="nama">
-                <input name="jurusan" type="text" class="text" placeholder="jurusan">
-                <input type="submit" value="Kirim">
+                <input autofocus required name="nim" type="text" class="text" placeholder="nim">
+                <input required name="nama" type="text" class="text" placeholder="nama">
+                <input required name="jurusan" type="text" class="text" placeholder="jurusan">
+                <input type="submit" value="Simpan">
             </form>
 
         </div>
-        <div class="tampilan">
-
-            <table>
+        <div class="tampilan m-5">
+            <table class="table">
                 <thead>
                     <td>NIM</td>
                     <td>Nama</td>

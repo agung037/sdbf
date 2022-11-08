@@ -18,7 +18,6 @@ def hello_world():
         nim = request.form['nim']
         nama = request.form['nama']
         jurusan = request.form['jurusan']
-
         conn = get_db_connection()
         conn.execute('INSERT INTO mahasiswa (nim, nama, jurusan) VALUES (?, ?, ?)', (nim, nama, jurusan))
         conn.commit()
