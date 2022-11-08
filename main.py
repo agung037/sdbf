@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
 import sqlite3
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "jsadjhadjh73736s7ds7d6k3j4"
@@ -30,3 +31,5 @@ def hello_world():
     return render_template('index.html', mahasiswa=mahasiswa)
 
 
+if __name__ == '__main__':
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
