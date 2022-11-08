@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS mahasiswa;
+
+CREATE TABLE mahasiswa(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nama TEXT NOT NULL,
+    nim TEXT NOT NULL,
+    jurusan TEXT NOT NULL
+);
