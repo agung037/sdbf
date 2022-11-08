@@ -30,5 +30,15 @@ def hello_world():
     return render_template('index.html', mahasiswa=mahasiswa)
 
 
+@app.route("/drop")
+def drop():
+    conn = get_db_connection()
+    conn.execute('DELETE FROM mahasiswa')
+    conn.commit()
+    conn.close()
+    return redirect('/')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
